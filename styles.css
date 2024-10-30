@@ -42,6 +42,14 @@ header {
     color:#ffffff;  
     
 }
+
+.recep-button:hover{
+    background-color: #e779e2; 
+    border-color: #dd5bd7;
+    color:#ffffff;  
+    
+}
+
 footer {
     background-color: #dd5bd7; 
     color: #ffffff;
