@@ -7,3 +7,31 @@ body, html {
     margin: 0;
     font-family: Roboto, sans-serif;
 }
+
+header {
+    background-color: #dd5bd7; 
+}
+
+.navbar {
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    flex-direction: column;
+}
+
+.navbar .navbar-brand {
+    font-size: 1.5em;
+    color: #ffffff !important;
+}
+
+.navbar .form-control {
+    max-width: 400px; 
+}
+
+.navbar .nav-link {
+    color: #ffffff !important;
+    font-size: 1.5em;
+}
+
+.navbar .nav-link:hover {
+    color: #0015ff !important; 
+} 
