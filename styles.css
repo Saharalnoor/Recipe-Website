@@ -12,6 +12,38 @@ header {
     background-color: #dd5bd7; 
 }
 
+.hero {
+    background-image: url('recipe.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.25em;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    font-size: 1.25em;
+    padding: 10px 30px;
+}
+
 .navbar {
     padding: 0.5rem 1rem;
     color: #ffffff;
