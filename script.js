@@ -57,9 +57,9 @@ function displayRecipes() {
             <p><strong>Category:</strong> ${recipe.category}</p>
             <p><strong>Ingredients:</strong> ${recipe.ingredients}</p>
             <p><strong>Instructions:</strong> ${recipe.instructions}</p>
-            <button class="btn btn-outline-warning" onclick="editRecipe(${index})">Edit</button>
-            <button class="btn btn-outline-danger" onclick="deleteRecipe(${index})">Delete</button>
-            <button class="btn btn-outline-primary" onclick="addToFavorites(${index})">Favorite</button>
+            <button class="btn btn-outline-warning recep-button" onclick="editRecipe(${index})">Edit</button>
+            <button class="btn btn-outline-danger recep-button" onclick="deleteRecipe(${index})">Delete</button>
+            <button class="btn btn-outline-primary recep-button" onclick="addToFavorites(${index})">Favorite</button>
         `;
         recipeList.appendChild(card);
     });
