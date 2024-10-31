@@ -128,3 +128,54 @@ textarea {
     max-height: 200px;
     overflow-y: auto;
 }
+
+@media (max-width: 768px) {
+    /* Stack recipe cards on smaller screens */
+    #recipeList {
+        grid-template-columns: 1fr;
+    }
+
+    /* Smaller font and button sizes */
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .hero .btn {
+        font-size: 1em;
+        padding: 8px 20px;
+    }
+
+    /* Adjust search bar width on smaller screens */
+    .navbar .form-control {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9em;
+    }
+
+    /* Reduce input and button size on extra small screens */
+    .navbar .form-control {
+        width: 80px;
+        padding: 5px;
+    }
+
+    input, textarea, select {
+        font-size: 0.9em;
+    }
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #categoryFilter {
+        display: none; /* Hide category filter on very small screens */
+    }
+}
