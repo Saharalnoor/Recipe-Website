@@ -87,3 +87,50 @@ function deleteRecipe(index) {
     localStorage.setItem('recipes', JSON.stringify(recipes));
     displayRecipes();
 }
+
+// Add to Favorites
+function addToFavorites(index) {
+    let recipes = JSON.parse(localStorage.getItem('recipes')) || [];
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    const recipe = recipes[index];
+
+    if (!favorites.some(fav => fav.name === recipe.name)) {
+        favorites.push(recipe);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+        displayFavorites();
+    }
+}
+
+// Display Favorites
+function displayFavorites() {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const favoriteList = document.getElementById('favoriteList');
+    favoriteList.innerHTML = '';
+
+    favorites.forEach((fav, index) => {
+        const li = document.createElement('li');
+        li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+        li.innerHTML = `
+            ${fav.name}
+            <button class="btn btn-outline-danger btn-sm recep-button " onclick="removeFromFavorites(${index})">Remove</button>
+        `;
+        favoriteList.appendChild(li);
+    });
+}
+
+// Remove from Favorites
+function removeFromFavorites(index) {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    favorites.splice(index, 1);
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+    displayFavorites();
+}
+
+// Clear Form
+function clearForm() {
+    document.getElementById('recipeName').value = '';
+    document.getElementById('recipeIngredients').value = '';
+    document.getElementById('recipeInstructions').value = '';
+    document.getElementById('recipeCategory').value = 'Breakfast';
+}
